@@ -19,6 +19,13 @@ Import jQuery and scholar.js:
 <script type="text/javascript" src="dist/scholar.js"></script>
 ```
 
+or from CDN (kha.li is my server):
+
+```html
+<script type="text/javascript" src="http://code.jquery.com/jquery-2.2.0.min.js"></script>
+<script type="text/javascript" src="http://kha.li/dist/scholar/scholar-0.1.min.js"></script>
+```
+
 Load results with your Google Scholar ID:
 
 ```js
@@ -37,7 +44,7 @@ Then, add span (or whatever) where you want to get your publication count:
 <html>
   <head>
     <script type="text/javascript" src="http://code.jquery.com/jquery-2.2.0.min.js"></script>
-    <script type="text/javascript" src="dist/scholar.js"></script>
+    <script type="text/javascript" src="http://kha.li/dist/scholar/scholar-0.1.min.js"></script>
     <script type="text/javascript">
       Scholar.load("-BL0_2EAAAAJ");
     </script>
