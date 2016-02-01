@@ -8,7 +8,7 @@ Show your publication count for all your publications, from Google Scholar.
 
 - Internet access (it asks [Google Scholar](http://scholar.google.com/) on page load).
 - [jQuery](http://jquery.com/).
-- custom [jQuery.ajax mid - CROSS DOMAIN AJAX](https://github.com/padolsey-archive/jquery.fn/tree/master/cross-domain-ajax) from @padolsey-archive (to load Google Scholar directly from js. Included inside scholar.js to remove dependance).
+- custom [jQuery.ajax mid - CROSS DOMAIN AJAX](https://github.com/padolsey-archive/jquery.fn/tree/master/cross-domain-ajax) from @padolsey-archive (to load Google Scholar directly from js. Included inside scholar.js to remove a dependence).
 
 ## Usage
 
@@ -18,7 +18,7 @@ Load results with your Google Scholar ID:
 Scholar.load("YOUR-GOOGLE-SCHOLAR-ID"); // Find it on your Google Scholar profile
 ```
 
-Then, add span where you want to get your publication count:
+Then, add span (or whatever) where you want to get your publication count:
 
 ```html
 <span class="scholar" name="PUBLICATION-NAME" with-link="true"></span>
