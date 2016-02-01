@@ -12,31 +12,31 @@ Show your publication count for all your publications, from Google Scholar.
 
 ## Usage
 
-Import jQuery and scholar.js:
+- Import jQuery and scholar.js:
 
-```html
-<script type="text/javascript" src="http://code.jquery.com/jquery-2.2.0.min.js"></script>
-<script type="text/javascript" src="dist/scholar.js"></script>
-```
+  ```html
+  <script type="text/javascript" src="http://code.jquery.com/jquery-2.2.0.min.js"></script>
+  <script type="text/javascript" src="dist/scholar.js"></script>
+  ```
 
-or from CDN (kha.li is my server):
+  or from CDN (kha.li is my server):
 
-```html
-<script type="text/javascript" src="http://code.jquery.com/jquery-2.2.0.min.js"></script>
-<script type="text/javascript" src="http://kha.li/dist/scholar/scholar-0.1.min.js"></script>
-```
+  ```html
+  <script type="text/javascript" src="http://code.jquery.com/jquery-2.2.0.min.js"></script>
+  <script type="text/javascript" src="http://kha.li/dist/scholar/scholar-0.1.min.js"></script>
+  ```
 
-Load results with your Google Scholar ID:
+- Load results with your Google Scholar ID:
 
-```js
-Scholar.load("YOUR-GOOGLE-SCHOLAR-ID"); // Find it on your Google Scholar profile
-```
+  ```js
+  Scholar.load("YOUR-GOOGLE-SCHOLAR-ID"); // Find it on your Google Scholar profile
+  ```
 
-Then, add span (or whatever) where you want to get your publication count:
+- Then, add span (or whatever) where you want to get your publication count:
 
-```html
-<span class="scholar" name="PUBLICATION-NAME" with-link="true"></span>
-```
+  ```html
+  <span class="scholar" name="PUBLICATION-NAME" with-link="true"></span>
+  ```
 
 ## Example
 
