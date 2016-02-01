@@ -12,6 +12,13 @@ Show your publication count for all your publications, from Google Scholar.
 
 ## Usage
 
+Import jQuery and scholar.js:
+
+```html
+<script type="text/javascript" src="http://code.jquery.com/jquery-2.2.0.min.js"></script>
+<script type="text/javascript" src="js/scholar.js"></script>
+```
+
 Load results with your Google Scholar ID:
 
 ```js
