@@ -71,12 +71,13 @@ var Scholar = {
           for( j = 0; j < Scholar.publi_name.length && !found; j++ ) {
             if( Scholar.publi_name[j].toLowerCase() == allElements[i].getAttribute("name").toLowerCase() ) {
               console.log('Found: Publication count ' + Scholar.publi_cite_count[j]);
+              var count = (Scholar.publi_cite_count[j] < 1)?0:Scholar.publi_cite_count[j];
 
               if( allElements[i].getAttribute("with-link") == "true" ) {
-                allElements[i].innerHTML = '<a href="' + Scholar.scholar_url + 'citations?view_op=view_citation&hl=en&user=' + Scholar.author + '&citation_for_view=' + Scholar.author + ':' + Scholar.publi_id[j]  + '">' + Scholar.publi_cite_count[j] + '</a>';
+                allElements[i].innerHTML = '<a href="' + Scholar.scholar_url + 'citations?view_op=view_citation&hl=en&user=' + Scholar.author + '&citation_for_view=' + Scholar.author + ':' + Scholar.publi_id[j]  + '">' + count + '</a>';
               }
               else {
-                allElements[i].innerHTML = Scholar.publi_cite_count[j];
+                allElements[i].innerHTML = count
               }
               found = true;
             }
