@@ -51,4 +51,9 @@ Then, add span (or whatever) where you want to get your publication count:
 
 > Integral based Curvature Estimators in Digital Geometry - [12](https://scholar.google.fr/citations?view_op=view_citation&hl=fr&user=-BL0_2EAAAAJ&citation_for_view=-BL0_2EAAAAJ:u5HHmVD_uO8C)
 
+
+## LICENSE
+
+All this work is under [Creative Commons CC BY-NC-SA 4.0](http://creativecommons.org/licenses/by-nc-sa/4.0/) license, see [LICENSE.md](https://github.com/jlevallois/scholar.js/blob/master/LICENSE.md)
+
 :octocat:
