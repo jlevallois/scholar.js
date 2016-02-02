@@ -70,6 +70,9 @@ Show your publication count for all your publications, from Google Scholar.
 
 > Integral based Curvature Estimators in Digital Geometry - [12](https://scholar.google.fr/citations?view_op=view_citation&hl=fr&user=-BL0_2EAAAAJ&citation_for_view=-BL0_2EAAAAJ:u5HHmVD_uO8C)
 
+## Live Example
+
+- [http://liris.cnrs.fr/jeremy.levallois/publications.html](http://liris.cnrs.fr/jeremy.levallois/publications.html)
 
 ## License
 
