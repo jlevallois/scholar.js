@@ -26,14 +26,7 @@ Show your publication count for all your publications, from Google Scholar.
   <script type="text/javascript" src="http://kha.li/dist/scholar/scholar-0.1.min.js"></script>
   ```
 
-- Load results with your Google Scholar ID:
-
-  ```js
-  Scholar.debug = true; // (optional) Enable debug message on console.
-  Scholar.load("YOUR-GOOGLE-SCHOLAR-ID"); // Find it on your Google Scholar profile
-  ```
-
-- Then, add span (or whatever) where you want to get your publication count:
+- Add span (or whatever) where you want to get your publication count:
 
   ```html
   <span class="scholar" name="PUBLICATION-NAME" with-link="true"></span>
@@ -43,6 +36,12 @@ Show your publication count for all your publications, from Google Scholar.
   - `name="XXXXX"`: publication name (must be **exactly** the same as your Google Scholar publication).
   - `with-link="true|false"`: (optional) add a link to the Google Scholar page of the publication.
 
+- Then, load results with your Google Scholar ID at the end of the page:
+
+  ```js
+  Scholar.debug = true; // (optional) Enable debug message on console.
+  Scholar.load("YOUR-GOOGLE-SCHOLAR-ID"); // Find it on your Google Scholar profile
+  ```
 ## Example
 
 ```html
@@ -50,9 +49,6 @@ Show your publication count for all your publications, from Google Scholar.
   <head>
     <script type="text/javascript" src="http://code.jquery.com/jquery-2.2.0.min.js"></script>
     <script type="text/javascript" src="http://kha.li/dist/scholar/scholar-0.1.min.js"></script>
-    <script type="text/javascript">
-      Scholar.load("-BL0_2EAAAAJ");
-    </script>
   </head>
   <body>
     <p>Integral based Curvature Estimators in Digital Geometry -
@@ -62,6 +58,9 @@ Show your publication count for all your publications, from Google Scholar.
         <!-- add a loading image here -->
       </span>
     </p>
+    <script type="text/javascript">
+      Scholar.load("-BL0_2EAAAAJ");
+    </script>
   </body>
 </html>
 ```
