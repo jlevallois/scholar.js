@@ -42,6 +42,7 @@ Show your publication count for all your publications, from Google Scholar.
   Scholar.debug = true; // (optional) Enable debug message on console.
   Scholar.load("YOUR-GOOGLE-SCHOLAR-ID"); // Find it on your Google Scholar profile
   ```
+  
 ## Example
 
 ```html
