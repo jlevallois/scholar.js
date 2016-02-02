@@ -13,7 +13,7 @@
 var Scholar = {
   author: "SCHOLAR_AUTHOR_ID",
   scholar_url: "http://scholar.google.com/",
-  debug: true,
+  debug: false,
   publi_name : [],
   publi_id : [],
   publi_cite_count : [],
@@ -70,14 +70,17 @@ var Scholar = {
           var found = false;
           for( j = 0; j < Scholar.publi_name.length && !found; j++ ) {
             if( Scholar.publi_name[j].toLowerCase() == allElements[i].getAttribute("name").toLowerCase() ) {
-              console.log('Found: Publication count ' + Scholar.publi_cite_count[j]);
+
               var count = (Scholar.publi_cite_count[j] < 1)?0:Scholar.publi_cite_count[j];
+              if( Scholar.debug ) {
+                console.log('Publication found. Count: ' + count);
+              }
 
               if( allElements[i].getAttribute("with-link") == "true" ) {
                 allElements[i].innerHTML = '<a href="' + Scholar.scholar_url + 'citations?view_op=view_citation&hl=en&user=' + Scholar.author + '&citation_for_view=' + Scholar.author + ':' + Scholar.publi_id[j]  + '">' + count + '</a>';
               }
               else {
-                allElements[i].innerHTML = count
+                allElements[i].innerHTML = count;
               }
               found = true;
             }
@@ -89,7 +92,9 @@ var Scholar = {
         }
       },
       error: function() {
-        console.log('Can\'t open requested URL.');
+        if( Scholar.debug ) {
+          console.log('Can\'t open requested URL.');
+        }
         var allElements = document.getElementsByClassName("scholar");
         for (i = 0; i < allElements.length; i++) {
           allElements[i].innerHTML = '&#10008';
