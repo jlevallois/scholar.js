@@ -16,7 +16,7 @@ Show your publication count for all your publications, from Google Scholar.
 
   ```html
   <script type="text/javascript" src="http://code.jquery.com/jquery-2.2.0.min.js"></script>
-  <script type="text/javascript" src="dist/scholar.js"></script>
+  <script type="text/javascript" src="dist/scholar.min.js"></script>
   ```
 
   or from CDN (kha.li is my server):
