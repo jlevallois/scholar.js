@@ -18,6 +18,9 @@ var Scholar = {
   publi_cite_count : [],
   // preloaded : false,
   load: function( _author ) {
+    var i = 0,
+        j = 0;
+    
     this.author = _author;
     if( this.debug ) {
       console.log( "Preloading author " + this.author );
@@ -46,7 +49,7 @@ var Scholar = {
         if( Scholar.debug ) {
           console.log( 'Found ' + Scholar.publi_name.length + ' publications' );
 
-          if( Scholar.publi_name.length != Scholar.publi_cite_count.length ) {
+          if( Scholar.publi_name.length !== Scholar.publi_cite_count.length ) {
             console.log( 'Wrong number of publications and cites count : ' + Scholar.publi_name.length  + ' and ' + Scholar.publi_cite_count.length);
           }
           else {
@@ -68,14 +71,14 @@ var Scholar = {
           }
           var found = false;
           for( j = 0; j < Scholar.publi_name.length && !found; j++ ) {
-            if( Scholar.publi_name[j].toLowerCase() == allElements[i].getAttribute("name").toLowerCase() ) {
+            if( Scholar.publi_name[j].toLowerCase() === allElements[i].getAttribute("name").toLowerCase() ) {
 
               var count = (Scholar.publi_cite_count[j] < 1)?0:Scholar.publi_cite_count[j];
               if( Scholar.debug ) {
                 console.log('Publication found. Count: ' + count);
               }
 
-              if( allElements[i].getAttribute("with-link") == "true" ) {
+              if( allElements[i].getAttribute("with-link") === "true" ) {
                 allElements[i].innerHTML = '<a href="' + Scholar.scholar_url + 'citations?view_op=view_citation&hl=en&user=' + Scholar.author + '&citation_for_view=' + Scholar.author + ':' + Scholar.publi_id[j]  + '">' + count + '</a>';
               }
               else {
@@ -128,7 +131,7 @@ var Scholar = {
   //     // console.log("C " + _author + " " + _publi_name + " " + _print_link);
   //   }
   // }
-}
+};
 
 
 /**
@@ -147,7 +150,7 @@ jQuery.ajax = (function(_ajax){
 
     var protocol = location.protocol,
         hostname = location.hostname,
-        exRegex = RegExp(protocol + '//' + hostname),
+        exRegex = new RegExp(protocol + '//' + hostname),
         YQL = 'http' + (/^https/.test(protocol)?'s':'') + '://query.yahooapis.com/v1/public/yql?callback=?',
         query = 'select * from html where url="{URL}" and xpath="*"';
 

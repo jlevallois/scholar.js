@@ -22,6 +22,32 @@ module.exports = function(grunt) {
         dest: 'dist/scholar.min.js'
       }
     },
+    jshint: {
+			options: {
+				curly: false,
+				eqeqeq: true,
+				immed: true,
+				latedef: true,
+				newcap: true,
+				noarg: true,
+				sub: true,
+				undef: true,
+				eqnull: true,
+				browser: true,
+				expr: true,
+				globals: {
+					head: false,
+					module: false,
+					console: false,
+					unescape: false,
+					define: false,
+					exports: false,
+          "$": false,
+          "jQuery": false
+				}
+			},
+			files: [ 'Gruntfile.js', 'src/scholar.js' ]
+		},
     watch: {
 			options: {
 				livereload: true
@@ -35,11 +61,12 @@ module.exports = function(grunt) {
 
   // Dependencies
   grunt.loadNpmTasks( 'grunt-contrib-uglify' );
+  grunt.loadNpmTasks( 'grunt-contrib-jshint' );
   grunt.loadNpmTasks( 'grunt-contrib-watch' );
 
   // Default task(s).
   grunt.registerTask('default', ['js']);
-  grunt.registerTask( 'js', [ 'uglify' ] );
+  grunt.registerTask( 'js', [ 'jshint', 'uglify' ] );
   grunt.registerTask( 'serve', [ 'watch' ] );
 
 };
