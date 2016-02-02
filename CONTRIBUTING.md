@@ -9,14 +9,17 @@ Show your publication count for all your publications, from Google Scholar. See 
 1. Install [Node.js](http://nodejs.org/).
 2. Install [Grunt](http://gruntjs.com/getting-started#installing-the-cli).
 3. Clone the scholar.js repository
+
    ```sh
    git clone https://github.com/jlevallois/scholar.js.git
    ```
 4. Install dependencies
+
    ```sh
    npm install
    ```
 5. Monitor source files for changes
+
    ```sh
    grunt serve
    ```

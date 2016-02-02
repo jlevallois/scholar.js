@@ -2,8 +2,7 @@
  * scholar.js
  * ---
  * @author Jérémy Levallois (http://www.karganys.fr)
- * @version 0.1
- * @updated 1-FEB-16
+ * @version 0.1.1
  * ---
  * Note: Read the README.md
  * ---
