@@ -2,7 +2,7 @@
   "name": "scholar.js",
   "version": "0.1.1",
   "description": "scholar.js - a JavaScript parser for Google Scholar",
-  "main": "dist/scholar.js",
+  "main": "src/scholar.js",
   "directories": {
     "test": "test"
   },
