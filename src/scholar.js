@@ -9,6 +9,8 @@
  * @info https://github.com/jlevallois/scholar.js/
  */
 
+
+
 var Scholar = {
   author: "SCHOLAR_AUTHOR_ID",
   scholar_url: "http://scholar.google.com/",
@@ -18,9 +20,10 @@ var Scholar = {
   publi_cite_count : [],
   // preloaded : false,
   load: function( _author ) {
+    'use strict';
     var i = 0,
         j = 0;
-    
+
     this.author = _author;
     if( this.debug ) {
       console.log( "Preloading author " + this.author );
@@ -147,7 +150,7 @@ var Scholar = {
  */
 
 jQuery.ajax = (function(_ajax){
-
+    'use strict';
     var protocol = location.protocol,
         hostname = location.hostname,
         exRegex = new RegExp(protocol + '//' + hostname),
