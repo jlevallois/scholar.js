@@ -74,7 +74,7 @@ var Scholar = {
           }
           var found = false;
           for( j = 0; j < Scholar.publi_name.length && !found; j++ ) {
-            if( Scholar.publi_name[j].toLowerCase() === allElements[i].getAttribute("name").toLowerCase() ) {
+            if( Scholar.publi_name[j].toLowerCase().replace(/[^a-zA-Z]+/g, '') === allElements[i].getAttribute("name").toLowerCase().replace(/[^a-zA-Z]+/g, '') ) {
 
               var count = (Scholar.publi_cite_count[j] < 1)?0:Scholar.publi_cite_count[j];
               if( Scholar.debug ) {
