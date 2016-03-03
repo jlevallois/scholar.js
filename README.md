@@ -31,15 +31,22 @@ Show your publication count for all your publications, from Google Scholar.
   ```html
   <span class="scholar" name="PUBLICATION-NAME" with-link="true"></span>
   ```
+  or
+  ```html
+  <span class="scholar" publi-id="PUBLICATION-ID" with-link="true"></span>
+  ```
+
   Attributes:
   - `class="scholar"`: enable parser.
-  - `name="XXXXX"`: publication name (must be **exactly** the same as your Google Scholar publication).
+  - `publi-id="XXXX"`: publication ID (must be **exactly** the same as your Google Scholar publication).
+  - or `name="XXXXX"`: publication name (must be **exactly** the same as your Google Scholar publication).
   - `with-link="true|false"`: (optional) add a link to the Google Scholar page of the publication.
 
 - Then, load results with your Google Scholar ID at the end of the page:
 
   ```js
   Scholar.debug = true; // (optional) Enable debug message on console.
+  Scholar.not_found_msg = '&#10008' // (optional) Customize the displayed result if the publication is not found.
   Scholar.load("YOUR-GOOGLE-SCHOLAR-ID"); // Find it on your Google Scholar profile
   ```
 
@@ -68,7 +75,7 @@ Show your publication count for all your publications, from Google Scholar.
 
 ### Result
 
-> Integral based Curvature Estimators in Digital Geometry - [12](https://scholar.google.fr/citations?view_op=view_citation&hl=fr&user=-BL0_2EAAAAJ&citation_for_view=-BL0_2EAAAAJ:u5HHmVD_uO8C)
+> Integral based Curvature Estimators in Digital Geometry - [13](https://scholar.google.fr/citations?view_op=view_citation&hl=fr&user=-BL0_2EAAAAJ&citation_for_view=-BL0_2EAAAAJ:u5HHmVD_uO8C)
 
 ## Live Example
 
