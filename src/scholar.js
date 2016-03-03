@@ -16,7 +16,7 @@ var Scholar = {
   scholar_url: 'http://scholar.google.com/',
   debug: false,
   not_found_msg: '&#10008',
-  
+
   load: function( _author ) {
     'use strict';
     var i = 0,
@@ -129,7 +129,6 @@ var Scholar = {
     });
   }
 };
-
 
 /**
  * jQuery.ajax mid - CROSS DOMAIN AJAX
