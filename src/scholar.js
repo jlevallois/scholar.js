@@ -12,18 +12,26 @@
 
 
 var Scholar = {
-  author: "SCHOLAR_AUTHOR_ID",
-  scholar_url: "http://scholar.google.com/",
+  author: 'SCHOLAR_AUTHOR_ID',
+  scholar_url: 'http://scholar.google.com/',
   debug: false,
   publi_name : [],
   publi_id : [],
   publi_cite_count : [],
+  not_found_msg: '&#10008',
   // preloaded : false,
   load: function( _author ) {
     'use strict';
     var i = 0,
         j = 0;
 
+    if( _author === 'SCHOLAR_AUTHOR_ID' ) {
+      console.log( "You must specify your Google Scholar ID. See documentation." );
+      var allElements = document.getElementsByClassName("scholar");
+      for (i = 0; i < allElements.length; i++) {
+        allElements[i].innerHTML = Scholar.not_found_msg;
+      }
+    }
     this.author = _author;
     if( this.debug ) {
       console.log( "Preloading author " + this.author );
@@ -92,7 +100,7 @@ var Scholar = {
           }
           if( !found )
           {
-            allElements[i].innerHTML = '&#10008';
+            allElements[i].innerHTML = Scholar.not_found_msg;
           }
         }
       },
@@ -102,7 +110,7 @@ var Scholar = {
         }
         var allElements = document.getElementsByClassName("scholar");
         for (i = 0; i < allElements.length; i++) {
-          allElements[i].innerHTML = '&#10008';
+          allElements[i].innerHTML = Scholar.not_found_msg;
         }
       },
       complete: function(res) {
