@@ -76,30 +76,47 @@ var Scholar = {
 
         //////////////
         var allElements = document.getElementsByClassName("scholar");
-        for (i = 0; i < allElements.length; i++) {
-          if( Scholar.debug ) {
-            console.log("Asking for: " + allElements[i].getAttribute("name"));
-          }
-          var found = false;
-          for( j = 0; j < Scholar.publi_name.length && !found; j++ ) {
-            if( Scholar.publi_name[j].toLowerCase().replace(/[^a-zA-Z]+/g, '') === allElements[i].getAttribute("name").toLowerCase().replace(/[^a-zA-Z]+/g, '') ) {
-
-              var count = (Scholar.publi_cite_count[j] < 1)?0:Scholar.publi_cite_count[j];
-              if( Scholar.debug ) {
-                console.log('Publication found. Count: ' + count);
+        for( i = 0; i < allElements.length; i++ ) {
+          var pos = -1;
+          if( allElements[i].getAttribute("publi-id") ) {
+            if( Scholar.debug ) {
+              console.log("Asking for publication ID: " + allElements[i].getAttribute("publi-id"));
+            }
+            for( j = 0; j < Scholar.publi_id.length && pos === -1; j++ ) {
+              if( Scholar.publi_id[j] === allElements[i].getAttribute("publi-id") ) {
+                pos = j;
               }
-
-              if( allElements[i].getAttribute("with-link") === "true" ) {
-                allElements[i].innerHTML = '<a href="' + Scholar.scholar_url + 'citations?view_op=view_citation&hl=en&user=' + Scholar.author + '&citation_for_view=' + Scholar.author + ':' + Scholar.publi_id[j]  + '">' + count + '</a>';
-              }
-              else {
-                allElements[i].innerHTML = count;
-              }
-              found = true;
             }
           }
-          if( !found )
-          {
+          else if( allElements[i].getAttribute("name") ) {
+            if( Scholar.debug ) {
+              console.log("Asking for: " + allElements[i].getAttribute("name"));
+            }
+            for( j = 0; j < Scholar.publi_name.length && pos === -1; j++ ) {
+              if( Scholar.publi_name[j].toLowerCase().replace(/[^a-zA-Z]+/g, '') === allElements[i].getAttribute("name").toLowerCase().replace(/[^a-zA-Z]+/g, '') ) {
+                pos = j;
+              }
+            }
+          }
+          else {
+            if( Scholar.debug ) {
+              console.log("No attribute 'publi-id' or 'name' found for this publication.");
+            }
+          }
+
+          if( pos !== -1 ) {
+            var count = (Scholar.publi_cite_count[pos] < 1)?0:Scholar.publi_cite_count[pos];
+            if( Scholar.debug ) {
+              console.log('Publication found. Count: ' + count);
+            }
+            if( allElements[i].getAttribute("with-link") === "true" ) {
+              allElements[i].innerHTML = '<a href="' + Scholar.scholar_url + 'citations?view_op=view_citation&hl=en&user=' + Scholar.author + '&citation_for_view=' + Scholar.author + ':' + Scholar.publi_id[pos]  + '">' + count + '</a>';
+            }
+            else {
+              allElements[i].innerHTML = count;
+            }
+          }
+          else {
             allElements[i].innerHTML = Scholar.not_found_msg;
           }
         }
