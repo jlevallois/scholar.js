@@ -1,22 +1,34 @@
 <html>
   <head>
-    <script type="text/javascript" src="http://code.jquery.com/jquery-2.2.0.min.js"></script>
-    <script type="text/javascript" src="../src/scholar.js"></script>
+    <link rel="stylesheet" href="qunit-1.22.0.css">
   </head>
   <body>
+    <div id="qunit"></div>
+    <div id="qunit-fixture"></div>
     <h1>Publication list</h1>
-    <p>Publication with link - <span class="scholar" name="Integral based Curvature Estimators in Digital Geometry" with-link="true"><img src="img/loader.gif" /></span></p>
-    <p>Publication without link - <span class="scholar" name="Integral based Curvature Estimators in Digital Geometry"><img src="img/loader.gif" /></span></p>
-    <p>Publication with special characters - <span class="scholar" name="Estimateurs différentiels en géométrie discrète: applications à l'analyse de surfaces digitales" with-link="true"><img src="img/loader.gif" /></span></p>
-    <p>Publication with 0 citation, with link - <span class="scholar" name="Implementation of integral based digital curvature estimators in DGtal" with-link="true"><img src="img/loader.gif" /></span></p>
-    <p>Publication with 0 citation, without link - <span class="scholar" name="Implementation of integral based digital curvature estimators in DGtal"><img src="img/loader.gif" /></span></p>
-    <p>Wrong publication name - <span class="scholar" name="Wrong publication name" with-link=true><img src="img/loader.gif" /></span></p>
-    <!-- Not supported yet ! -->
-    <!-- <p>A comparative evaluation of length estimators of digital curves -
-    <span class="scholar" name="A comparative evaluation of length estimators of digital curves" with-link="true" author="C9NNbukAAAAJ"></span></p> -->
+    <p>Publication with link - <span class="scholar" name="Integral based Curvature Estimators in Digital Geometry" with-link="true"><img src="img/loader.gif" /></span> <em>(Should be <span class="scholar-result"><a href="http://scholar.google.com/citations?view_op=view_citation&hl=en&user=-BL0_2EAAAAJ&citation_for_view=-BL0_2EAAAAJ:u5HHmVD_uO8C">13</a></span>)</em></p>
+
+    <p>Publication with ID - <span class="scholar" publi-id="u5HHmVD_uO8C" with-link="true"><img src="img/loader.gif" /></span> <em>(Should be <span class="scholar-result"><a href="http://scholar.google.com/citations?view_op=view_citation&hl=en&user=-BL0_2EAAAAJ&citation_for_view=-BL0_2EAAAAJ:u5HHmVD_uO8C">13</a></span>)</em></p>
+
+    <p>Publication without link - <span class="scholar" name="Integral based Curvature Estimators in Digital Geometry"><img src="img/loader.gif" /></span> <em>(Should be <span class="scholar-result">13</span>)</em></p>
+
+    <p>Publication with special characters - <span class="scholar" name="Estimateurs différentiels en géométrie discrète: applications à l'analyse de surfaces digitales" with-link="true"><img src="img/loader.gif" /></span> <em>(Should be <span class="scholar-result"><a href="http://scholar.google.com/citations?view_op=view_citation&hl=en&user=-BL0_2EAAAAJ&citation_for_view=-BL0_2EAAAAJ:_Qo2XoVZTnwC">0</a></span>)</em></p>
+
+    <p>Publication with 0 citation, with link - <span class="scholar" name="Implementation of integral based digital curvature estimators in DGtal" with-link="true"><img src="img/loader.gif" /></span> <em>(Should be <span class="scholar-result"><a href="http://scholar.google.com/citations?view_op=view_citation&hl=en&user=-BL0_2EAAAAJ&citation_for_view=-BL0_2EAAAAJ:u-x6o8ySG0sC">0</a></span>)</em></p>
+
+    <p>Publication with 0 citation, without link - <span class="scholar" name="Implementation of integral based digital curvature estimators in DGtal"><img src="img/loader.gif" /></span> <em>(Should be <span class="scholar-result">0</span>)</em></p>
+
+    <p>Wrong publication name - <span class="scholar" name="Wrong publication name" with-link=true><img src="img/loader.gif" /></span> <em>(Should be <span class="scholar-result">&#10008</span>)</em></p>
+
+    <p>Wrong publication ID - <span class="scholar" publi-id="Wrong publication id" with-link="true"><img src="img/loader.gif" /></span> <em>(Should be <span class="scholar-result">&#10008</span>)</em></p>
+
+    <script type="text/javascript" src="http://code.jquery.com/jquery-2.2.0.min.js"></script>
+    <script type="text/javascript" src="../src/scholar.js"></script>
+    <script type="text/javascript" src="qunit-1.22.0.js"></script>
     <script type="text/javascript">
-      Scholar.debug = true;
+      // Scholar.debug = true;
       Scholar.load("-BL0_2EAAAAJ");
     </script>
+    <script type="text/javascript" src="index.js"></script>
   </body>
 </html>

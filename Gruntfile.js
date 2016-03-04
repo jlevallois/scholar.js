@@ -13,6 +13,9 @@ module.exports = function(grunt) {
 				' * Copyright (C) 2016 Jérémy Levallois, http://karganys.fr\n' +
 				' */'
 		},
+    qunit: {
+			files: [ 'test/*.html' ]
+		},
     uglify: {
       options: {
         banner: '<%= meta.banner %>\n'
@@ -60,13 +63,14 @@ module.exports = function(grunt) {
   });
 
   // Dependencies
+  grunt.loadNpmTasks( 'grunt-contrib-qunit' );
   grunt.loadNpmTasks( 'grunt-contrib-uglify' );
   grunt.loadNpmTasks( 'grunt-contrib-jshint' );
   grunt.loadNpmTasks( 'grunt-contrib-watch' );
 
   // Default task(s).
   grunt.registerTask('default', ['js']);
-  grunt.registerTask( 'js', [ 'jshint', 'uglify' ] );
+  grunt.registerTask( 'js', [ 'jshint', 'uglify', 'qunit' ] );
   grunt.registerTask( 'serve', [ 'watch' ] );
-
+  grunt.registerTask( 'test', [ 'jshint', 'qunit' ] );
 };
