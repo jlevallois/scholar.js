@@ -77,7 +77,7 @@ Show your publication count for all your publications, from Google Scholar.
 
 ### Result
 
-> Integral based Curvature Estimators in Digital Geometry - [13](https://scholar.google.fr/citations?view_op=view_citation&hl=fr&user=-BL0_2EAAAAJ&citation_for_view=-BL0_2EAAAAJ:u5HHmVD_uO8C)
+> Integral based Curvature Estimators in Digital Geometry - [15](https://scholar.google.fr/citations?view_op=view_citation&hl=fr&user=-BL0_2EAAAAJ&citation_for_view=-BL0_2EAAAAJ:u5HHmVD_uO8C)
 
 ## Live Example
 

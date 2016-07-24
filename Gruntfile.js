@@ -69,7 +69,7 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks( 'grunt-contrib-watch' );
 
   // Default task(s).
-  grunt.registerTask('default', ['js']);
+  grunt.registerTask( 'default', [ 'js' ] );
   grunt.registerTask( 'js', [ 'jshint', 'uglify', 'qunit' ] );
   grunt.registerTask( 'serve', [ 'watch' ] );
   grunt.registerTask( 'test', [ 'jshint', 'qunit' ] );
