@@ -1,6 +1,7 @@
 # scholar.js shows dynamically your citation count on your publication list.
 
-[![Travis](https://img.shields.io/travis/jlevallois/scholar.js.svg?style=flat-square)](https://travis-ci.org/jlevallois/scholar.js) [![Codacy grade](https://img.shields.io/codacy/grade/3d58162024e341f380bac93397cb4ae6.svg?style=flat-square)](https://www.codacy.com/app/jeremy-levallois/scholar-js)
+[![Travis](https://img.shields.io/travis/jlevallois/scholar.js.svg?style=flat-square)](https://travis-ci.org/jlevallois/scholar.js) [![Codacy grade](https://img.shields.io/codacy/grade/3d58162024e341f380bac93397cb4ae6.svg?style=flat-square)](https://www.codacy.com/app/jeremy-levallois/scholar-js) [![David](https://img.shields.io/david/jlevallois/scholar.js.svg?style=flat-square)](https://david-dm.org/jlevallois/scholar.js#info=dependencies)
+[![David](https://img.shields.io/david/dev/jlevallois/scholar.js.svg?style=flat-square)](https://david-dm.org/jlevallois/scholar.js#info=devDependencies)
 
 ## Aim
 
