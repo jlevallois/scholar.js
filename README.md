@@ -1,6 +1,6 @@
 # scholar.js shows dynamically your citation count on your publication list.
-[![Build Status](https://travis-ci.org/jlevallois/scholar.js.svg?branch=master)](https://travis-ci.org/jlevallois/scholar.js)
 
+[![Travis](https://img.shields.io/travis/jlevallois/scholar.js.svg?style=flat-square)](https://travis-ci.org/jlevallois/scholar.js) [![Codacy grade](https://img.shields.io/codacy/grade/3d58162024e341f380bac93397cb4ae6.svg?style=flat-square)](https://www.codacy.com/app/jeremy-levallois/scholar-js)
 
 ## Aim
 
