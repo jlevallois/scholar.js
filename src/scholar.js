@@ -13,7 +13,7 @@
 
 var Scholar = {
   author: "SCHOLAR_AUTHOR_ID",
-  scholarURL: "http://scholar.google.com/",
+  scholarURL: "https://scholar.google.com/",
   debug: false,
   not_found_msg: "&#10008",
 
