@@ -26,7 +26,7 @@ Show your publication count for all your publications, from Google Scholar.
 
   ```html
   <script type="text/javascript" src="http://code.jquery.com/jquery-2.2.0.min.js"></script>
-  <script type="text/javascript" src="http://kha.li/dist/scholar/scholar-0.1.0.min.js"></script>
+  <script type="text/javascript" src="http://kha.li/dist/scholar/scholar-0.1.1.min.js"></script>
   ```
 
 - Add span (or whatever) where you want to get your publication count:
@@ -59,7 +59,7 @@ Show your publication count for all your publications, from Google Scholar.
 <html>
   <head>
     <script type="text/javascript" src="http://code.jquery.com/jquery-2.2.0.min.js"></script>
-    <script type="text/javascript" src="http://kha.li/dist/scholar/scholar-0.1.0.min.js"></script>
+    <script type="text/javascript" src="http://kha.li/dist/scholar/scholar-0.1.1.min.js"></script>
   </head>
   <body>
     <p>Integral based Curvature Estimators in Digital Geometry -
@@ -78,7 +78,7 @@ Show your publication count for all your publications, from Google Scholar.
 
 ### Result
 
-> Integral based Curvature Estimators in Digital Geometry - [15](https://scholar.google.fr/citations?view_op=view_citation&hl=fr&user=-BL0_2EAAAAJ&citation_for_view=-BL0_2EAAAAJ:u5HHmVD_uO8C)
+> Integral based Curvature Estimators in Digital Geometry - [18](https://scholar.google.fr/citations?view_op=view_citation&hl=fr&user=-BL0_2EAAAAJ&citation_for_view=-BL0_2EAAAAJ:u5HHmVD_uO8C)
 
 ## Live Example
 
