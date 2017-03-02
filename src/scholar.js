@@ -107,8 +107,9 @@ var Scholar = {
             }
             if( allElements[i].getAttribute( "with-link" ) === "true" ) {
               var target = "";
-              if (allElements[i].getAttribute( "target" ))
+              if( allElements[i].getAttribute( "target" )) {
                 target = "target=" + allElements[i].getAttribute( "target" );
+              }
               allElements[i].innerHTML = "<a " + target + " href=\"" + Scholar.scholarURL + "citations?view_op=view_citation&hl=en&user=" + Scholar.author + "&citation_for_view=" + Scholar.author + ":" + publiId[pos]  + "\">" + count + "</a>";
             }
             else {
