@@ -13,7 +13,7 @@
 
 var Scholar = {
   author: "SCHOLAR_AUTHOR_ID",
-  scholarURL: "http://scholar.google.com/",
+  scholarURL: "https://scholar.google.com/",
   debug: false,
   not_found_msg: "&#10008",
 
@@ -106,7 +106,11 @@ var Scholar = {
               console.log( "Publication found. Count: " + count );
             }
             if( allElements[i].getAttribute( "with-link" ) === "true" ) {
-              allElements[i].innerHTML = "<a href=\"" + Scholar.scholarURL + "citations?view_op=view_citation&hl=en&user=" + Scholar.author + "&citation_for_view=" + Scholar.author + ":" + publiId[pos]  + "\">" + count + "</a>";
+              var target = "";
+              if( allElements[i].getAttribute( "target" )) {
+                target = "target=" + allElements[i].getAttribute( "target" );
+              }
+              allElements[i].innerHTML = "<a " + target + " href=\"" + Scholar.scholarURL + "citations?view_op=view_citation&hl=en&user=" + Scholar.author + "&citation_for_view=" + Scholar.author + ":" + publiId[pos]  + "\">" + count + "</a>";
             }
             else {
               allElements[i].innerHTML = count;
