@@ -89,7 +89,7 @@ var Scholar = {
               console.log( "Asking for: " + allElements[i].getAttribute( "name" ));
             }
             for( j = 0; j < publiName.length && pos === -1; j++ ) {
-              if( publiName[j].toLowerCase().replace(/[^a-zA-Z]+/g, '') === allElements[i].getAttribute("name").toLowerCase().replace(/[^a-zA-Z]+/g, '') ) {
+              if( publiName[j].replace(/[^a-zA-Z]+/g, '').toLowerCase() === allElements[i].getAttribute("name").replace(/[^a-zA-Z]+/g, '').toLowerCase() ) {
                 pos = j;
               }
             }
