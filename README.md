@@ -84,6 +84,11 @@ Show your publication count for all your publications, from Google Scholar.
 
 - [http://liris.cnrs.fr/jeremy.levallois/publications.html](http://liris.cnrs.fr/jeremy.levallois/publications.html)
 
+## Contributors
+
+- Jérémy Levallois [@jlevallois](https://github.com/jlevallois)
+- Jian Cheng [@JianCheng](https://github.com/JianCheng) - PR [#11](https://github.com/jlevallois/scholar.js/pull/11) [#12](https://github.com/jlevallois/scholar.js/pull/12)
+
 ## License
 
 All this work is under [Creative Commons CC BY-NC-SA 4.0](http://creativecommons.org/licenses/by-nc-sa/4.0/) license, see [LICENSE.md](https://github.com/jlevallois/scholar.js/blob/master/LICENSE.md)
