@@ -11,7 +11,7 @@ Show your publication count for all your publications, from Google Scholar.
 
 - Internet access (it asks [Google Scholar](http://scholar.google.com/) on page load).
 - [jQuery](http://jquery.com/).
-- custom [jQuery.ajax mid - CROSS DOMAIN AJAX](https://github.com/padolsey-archive/jquery.fn/tree/master/cross-domain-ajax) from @padolsey-archive (to load Google Scholar directly from js. Included inside scholar.js to remove a dependence).
+- [Ajax Cross Domain plugin](http://www.ajax-cross-origin.com) - `proxy.php` and `jquery.ajax-cross-origin.min.js` are bundled with scholar.js.
 
 ## Usage
 
@@ -19,6 +19,7 @@ Show your publication count for all your publications, from Google Scholar.
 
   ```html
   <script type="text/javascript" src="http://code.jquery.com/jquery-2.2.0.min.js"></script>
+  <script type="text/javascript" src="dist/jquery.ajax-cross-origin.min.js"></script>
   <script type="text/javascript" src="dist/scholar.min.js"></script>
   ```
 
@@ -26,8 +27,11 @@ Show your publication count for all your publications, from Google Scholar.
 
   ```html
   <script type="text/javascript" src="http://code.jquery.com/jquery-2.2.0.min.js"></script>
-  <script type="text/javascript" src="http://kha.li/dist/scholar/scholar-0.1.1.min.js"></script>
+  <script type="text/javascript" src="http://kha.li/dist/scholar/jquery.ajax-cross-origin.min.js"></script>
+  <script type="text/javascript" src="http://kha.li/dist/scholar/scholar-0.1.2.min.js"></script>
   ```
+
+- Upload somewhere in your FTP the `proxy.php`from the Ajax Cross Domain plugin.
 
 - Add span (or whatever) where you want to get your publication count:
 
@@ -50,7 +54,8 @@ Show your publication count for all your publications, from Google Scholar.
   ```js
   Scholar.debug = true; // (optional) Enable debug message on console.
   Scholar.not_found_msg = '&#10008' // (optional) Customize the displayed result if the publication is not found.
-  Scholar.load("YOUR-GOOGLE-SCHOLAR-ID"); // Find it on your Google Scholar profile
+  Scholar.pathToProxy = "plugin/proxy.php" // (optional, default value is "proxy.php") Path to the proxy for cross domain ajax requests, basically the "proxy.php" file included into the bundle. See [Ajax Cross Domain plugin](http://www.ajax-cross-origin.com) for more information.
+  Scholar.load("YOUR-GOOGLE-SCHOLAR-ID"); // Find it on your Google Scholar profil.
   ```
 
 ## Example
@@ -59,7 +64,8 @@ Show your publication count for all your publications, from Google Scholar.
 <html>
   <head>
     <script type="text/javascript" src="http://code.jquery.com/jquery-2.2.0.min.js"></script>
-    <script type="text/javascript" src="http://kha.li/dist/scholar/scholar-0.1.1.min.js"></script>
+    <script type="text/javascript" src="http://kha.li/dist/scholar/jquery.ajax-cross-origin.min.js"></script>    
+    <script type="text/javascript" src="http://kha.li/dist/scholar/scholar-0.1.2.min.js"></script>
   </head>
   <body>
     <p>Integral based Curvature Estimators in Digital Geometry -
@@ -78,7 +84,7 @@ Show your publication count for all your publications, from Google Scholar.
 
 ### Result
 
-> Integral based Curvature Estimators in Digital Geometry - [18](https://scholar.google.fr/citations?view_op=view_citation&hl=fr&user=-BL0_2EAAAAJ&citation_for_view=-BL0_2EAAAAJ:u5HHmVD_uO8C)
+> Integral based Curvature Estimators in Digital Geometry - [21](https://scholar.google.fr/citations?view_op=view_citation&hl=fr&user=-BL0_2EAAAAJ&citation_for_view=-BL0_2EAAAAJ:u5HHmVD_uO8C)
 
 ## Live Example
 
@@ -88,6 +94,7 @@ Show your publication count for all your publications, from Google Scholar.
 
 - Jérémy Levallois [@jlevallois](https://github.com/jlevallois)
 - Jian Cheng [@JianCheng](https://github.com/JianCheng) - PR [#11](https://github.com/jlevallois/scholar.js/pull/11) [#12](https://github.com/jlevallois/scholar.js/pull/12)
+- Nikolaos Tsantalis [@tsantalis](https://github.com/jlevallois/scholar.js/issues/15)
 
 ## License
 
